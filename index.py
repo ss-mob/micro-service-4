@@ -4,8 +4,8 @@ print("Loading function")
 
 
 def lambda_handler(event, context):
-    transactionType = event['type']
-    transactionAmount = event['amount']
+    transactionType = event['queryStringParameters']['type']
+    transactionAmount = event['queryStringParameters']['amount']
 
     print(f"transactioType - {transactionType}")
     print(f"transactioAmount - {transactionAmount}")
